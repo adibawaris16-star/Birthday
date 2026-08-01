@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#ff6ec7,#ff9a9e,#fad0c4,#fbc2eb);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+overflow-x:hidden;
+color:#fff;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+text-align:center;
+position:relative;
+}
+
+.card{
+max-width:800px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+padding:40px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+h1{
+font-size:3rem;
+margin-bottom:20px;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+
+.subtitle{
+font-size:1.3rem;
+margin-bottom:30px;
+}
+
+button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:#fff;
+color:#ff4081;
+font-weight:bold;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+.section{
+padding:80px 20px;
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+.section h2{
+font-size:2.5rem;
+margin-bottom:30px;
+}
+
+.section p{
+font-size:20px;
+line-height:2;
+background:rgba(255,255,255,.15);
+padding:35px;
+border-radius:20px;
+}
+
+.footer{
+padding:50px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+}
+
+.confetti{
+position:fixed;
+top:-20px;
+width:12px;
+height:18px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(720deg);
+}
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:2.2rem;
+}
+
+.section h2{
+font-size:2rem;
+}
+
+.section p{
+font-size:18px;
+padding:20px;
+}
+
+button{
+width:100%;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="card">
+
+<h1>🎂 Happy Birthday! 🎉</h1>
+
+<p class="subtitle">
+Today is your special day, and I have something from the bottom of my heart just for you. ❤️
+</p>
+
+<button onclick="confettiRain()">
+🎁 Open My Birthday Wish
+</button>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>💌 A Special Birthday Wish</h2>
+
+<p>
+
+Happy Birthday to the most wonderful, kind-hearted, and beautiful soul! ❤️🎂
+
+Today is not just another date on the calendar. Today is the day when someone truly amazing came into this world and made it a brighter place. Your smile has the power to light up even the darkest days, your kindness inspires everyone around you, and your presence brings happiness wherever you go.
+
+On this beautiful day, I want to wish you endless happiness, countless blessings, and all the success your heart desires. May every sunrise bring new hope, every sunset leave behind beautiful memories, and every moment of your life be filled with love, peace, and laughter.
+
+I hope you never stop believing in yourself because you are capable of achieving incredible things. Every dream you dream deserves to come true, and every goal you set deserves to be achieved. Keep shining, keep smiling, and keep being the amazing person you are.
+
+Life is a journey filled with beautiful moments, and I pray that this new chapter of your life is even more wonderful than the last one. May your heart always remain full of love, your mind full of peace, and your life full of exciting adventures.
+
+Whenever you feel tired or discouraged, remember how strong, brave, and special you truly are. You have already overcome so much, and I know the future holds even greater things for you.
+
+Thank you for being an inspiration, for spreading kindness, and for making the lives of everyone around you brighter. People like you are rare, and the world is lucky to have someone as caring and genuine as you.
+
+May this birthday bring you unforgettable memories, endless laughter, precious moments with your loved ones, and all the happiness you've ever wished for. I hope every candle on your cake represents a dream that soon becomes reality.
+
+As you celebrate another year of your wonderful life, never forget how deeply appreciated and loved you are. Continue chasing your dreams with confidence, never lose your beautiful smile, and always believe that the best is yet to come.
+
+May your days always be filled with sunshine, your nights with peaceful dreams, your heart with unconditional love, and your future with endless opportunities.
+
+Today is your day, so laugh louder, smile brighter, dance freely, make unforgettable memories, and enjoy every single second because you deserve all the happiness in the world.
+
+Happy Birthday once again! 🎉🎂❤️
+
+May God bless you with good health, unlimited happiness, endless success, true friendships, everlasting love, inner peace, and a life full of beautiful surprises.
+
+No matter where life takes you, may every path lead you toward joy, every challenge make you stronger, and every dream become a beautiful reality.
+
+Keep shining.
+Keep smiling.
+Keep believing.
+The world is a better place because you are in it.
+
+🎂 Happy Birthday! 🎉❤️
+
+</p>
+
+</section>
+
+<div class="footer">
+🎈 Wishing You a Lifetime of Happiness, Love & Success ❤️🎂🎉
+</div>
+
+<script>
+
+function confettiRain(){
+
+let colors=["#ff0","#0ff","#0f0","#fff","#f0f","#ff5722","#2196f3"];
+
+for(let i=0;i<300;i++){
+
+let conf=document.createElement("div");
+
+conf.className="confetti";
+
+conf.style.left=Math.random()*100+"vw";
+
+conf.style.background=colors[Math.floor(Math.random()*colors.length)];
+
+conf.style.animationDuration=(Math.random()*3+2)+"s";
+
+conf.style.opacity=Math.random();
+
+document.body.appendChild(conf);
+
+setTimeout(()=>{
+conf.remove();
+},6000);
+
+}
+
+}
+
+setInterval(confettiRain,5000);
+
+</script>
+
+</body>
+</html>
